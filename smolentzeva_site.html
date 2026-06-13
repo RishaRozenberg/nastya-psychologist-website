@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Смоленцева Анастасия — Психолог</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:         #F4F0EE;
+      --bg-warm:    #F0E4D9;
+      --bg-card:    #FDFBF9;
+      --accent:     #758284;
+      --accent-mid: #929292;
+      --accent-light: #C9D6CF;
+      --sage:       #6B7D73;
+      --dark:       #302C2A;
+      --mid:        #6B6562;
+      --light-line: #E2DBD6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────── */
+    .serif { font-family: 'Cormorant Garamond', serif; }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    /* ─── LAYOUT ──────────────────────────────────── */
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    /* ─── ANIMATIONS ──────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── HEADER / HERO ───────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      background: var(--bg-warm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 40px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.07;
+      pointer-events: none;
+    }
+
+    .hero-top {
+      padding: 48px 24px 0;
+    }
+
+    .hero-label {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+
+    .hero-name {
+      font-size: clamp(42px, 11vw, 60px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .hero-title {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: var(--mid);
+      letter-spacing: 0.04em;
+      margin-bottom: 40px;
+    }
+
+    /* Photo placeholder */
+    .hero-photo {
+      width: calc(100% - 48px);
+      margin: 0 24px;
+      aspect-ratio: 4/5;
+      background: var(--accent-light);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(201,214,207,0.4) 0%, rgba(117,130,132,0.15) 100%);
+    }
+
+    .hero-photo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: rgba(117,130,132,0.7);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 16px;
+    }
+
+    .hero-photo-icon {
+      display: block;
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 12px;
+      opacity: 0.4;
+    }
+
+    .hero-bottom {
+      padding: 24px 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      padding: 14px 28px;
+      border-radius: 100px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .hero-cta:hover {
+      background: var(--sage);
+      transform: translateY(-2px);
+    }
+
+    .hero-scroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.45;
+    }
+
+    .hero-scroll span {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: var(--accent);
+      animation: scrollAnim 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollAnim {
+      0%, 100% { transform: scaleY(1); transform-origin: top; }
+      50% { transform: scaleY(0.4); transform-origin: top; }
+    }
+
+    /* ─── ABOUT ───────────────────────────────────── */
+    .about {
+      background: var(--bg);
+    }
+
+    .section-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 8vw, 44px);
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .body-text {
+      font-size: 15px;
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .body-text:last-child { margin-bottom: 0; }
+
+    /* Education badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 32px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-warm);
+      border-radius: 100px;
+      font-size: 12px;
+      color: var(--mid);
+      font-weight: 400;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ─── DIVIDER ──────────────────────────────────── */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.3;
+      margin: 0 24px 0;
+    }
+
+    /* ─── APPROACH ────────────────────────────────── */
+    .approach {
+      background: var(--accent);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .approach::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -50px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      pointer-events: none;
+    }
+
+    .approach .section-eyebrow { color: rgba(255,255,255,0.55); }
+
+    .approach .section-title {
+      color: #fff;
+      font-size: clamp(30px, 8vw, 40px);
+    }
+
+    .approach .section-title em { color: var(--accent-light); }
+
+    .approach-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(20px, 5vw, 26px);
+      color: rgba(255,255,255,0.85);
+      line-height: 1.4;
+      border-left: 2px solid var(--accent-light);
+      padding-left: 20px;
+      margin: 32px 0;
+    }
+
+    .approach-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .approach-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .approach-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-style: italic;
+      color: rgba(255,255,255,0.2);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .approach-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .approach-card-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+    }
+
+    /* ─── TOPICS ──────────────────────────────────── */
+    .topics {
+      background: var(--bg-warm);
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .topic-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 20px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .topic-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent-light);
+      border-radius: 2px;
+    }
+
+    .topic-card-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .topic-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+
+    .topic-card.wide {
+      grid-column: 1 / -1;
+    }
+
+    /* ─── CLIENT ──────────────────────────────────── */
+    .client {
+      background: var(--bg);
+    }
+
+    .client-block {
+      background: var(--bg-card);
+      border-radius: 24px;
+      padding: 32px 24px;
+      margin-top: 32px;
+      border: 1px solid var(--light-line);
+      position: relative;
+    }
+
+    .client-block::before {
+      content: '«';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      color: var(--accent-light);
+      position: absolute;
+      top: -8px;
+      left: 16px;
+      line-height: 1;
+      opacity: 0.6;
+    }
+
+    .client-block-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--dark);
+      line-height: 1.6;
+      padding-top: 24px;
+    }
+
+    /* ─── SERVICES ────────────────────────────────── */
+    .services {
+      background: var(--bg-warm);
+    }
+
+    .services-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 28px 24px;
+      border: 1px solid var(--light-line);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(117,130,132,0.12);
+    }
+
+    .service-card.featured {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .service-card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--bg-warm);
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .service-card.featured .service-card-tag {
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.8);
+    }
+
+    .service-card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .service-card.featured .service-card-name { color: #fff; }
+
+    .service-card-duration {
+      font-size: 13px;
+      color: var(--mid);
+      margin-bottom: 20px;
+    }
+
+    .service-card.featured .service-card-duration { color: rgba(255,255,255,0.65); }
+
+    .service-card-price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .price-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1;
+    }
+
+    .service-card.featured .price-num { color: #fff; }
+
+    .price-currency {
+      font-size: 16px;
+      color: var(--mid);
+      font-weight: 300;
+    }
+
+    .service-card.featured .price-currency { color: rgba(255,255,255,0.7); }
+
+    .service-card-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--accent-mid);
+      font-style: italic;
+    }
+
+    .service-card.featured .service-card-note { color: rgba(255,255,255,0.55); }
+
+    /* Format badges */
+    .service-formats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .format-badge {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid var(--light-line);
+      color: var(--mid);
+    }
+
+    .service-card.featured .format-badge {
+      border-color: rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ─── FIRST SESSION ───────────────────────────── */
+    .first-session {
+      background: var(--bg);
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 32px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 20px;
+      bottom: 20px;
+      width: 1px;
+      background: var(--light-line);
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 28px;
+      position: relative;
+    }
+
+    .step:last-child { padding-bottom: 0; }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-warm);
+      border: 1px solid var(--light-line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--accent);
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-content { padding-top: 8px; }
+
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .step-text {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* ─── VALUES ──────────────────────────────────── */
+    .values {
+      background: var(--bg-warm);
+    }
+
+    .values-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .value-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      background: var(--bg-card);
+      border-radius: 16px;
+    }
+
+    .value-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--bg-warm);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .value-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .value-text {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* ─── BOOKING / CTA ───────────────────────────── */
+    .booking {
+      background: var(--bg);
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .booking .section-title {
+      margin-bottom: 16px;
+    }
+
+    .booking .body-text {
+      max-width: 300px;
+      margin: 0 auto 40px;
+    }
+
+    .booking-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: 100px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--sage);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 32px;
+      border-radius: 100px;
+      background: transparent;
+      border: 1px solid var(--light-line);
+      color: var(--mid);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .booking-note {
+      font-size: 12px;
+      color: var(--accent-mid);
+      margin-top: 24px;
+      font-style: italic;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────── */
+    .footer {
+      background: var(--dark);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 8px;
+    }
+
+    .footer-title {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover { color: var(--accent-light); }
+
+    .footer-copy {
+      margin-top: 32px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ─── ONLINE/OFFLINE BADGE ────────────────────── */
+    .availability {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .avail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 12px;
+      border: 1px solid var(--light-line);
+      background: var(--bg-card);
+      color: var(--mid);
+    }
+
+    .avail-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7DC894;
+      box-shadow: 0 0 0 3px rgba(125,200,148,0.2);
+    }
+
+    /* ─── DESKTOP RESPONSIVE ──────────────────────── */
+    @media (min-width: 600px) {
+      .container { max-width: 560px; }
+
+      .hero-photo {
+        width: calc(100% - 48px);
+        aspect-ratio: 16/9;
+      }
+
+      .topics-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .topic-card.wide {
+        grid-column: auto;
+      }
+
+      .services-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .service-card {
+        flex: 1;
+        min-width: 220px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .container { max-width: 860px; }
+
+      .hero {
+        min-height: 100vh;
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .hero-top {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 48px;
+        max-width: 440px;
+      }
+
+      .hero-photo {
+        flex: 1;
+        margin: 0;
+        width: auto;
+        border-radius: 0;
+        aspect-ratio: auto;
+        min-height: 100vh;
+      }
+
+      .hero-bottom {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 440px;
+      }
+
+      .hero-name { font-size: 64px; }
+
+      section { padding: 96px 0; }
+
+      .topics-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 48px;
+      }
+
+      .steps::before { display: none; }
+
+      .step { padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── HERO ─────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-top">
+      <span class="hero-label">Психолог · Москва</span>
+      <h1 class="hero-name">
+        Смоленцева<br><em>Анастасия</em>
+      </h1>
+      <p class="hero-title">Психолог-консультант<br>Детский и семейный психотерапевт</p>
+    </div>
+
+    <div class="hero-photo" aria-label="Фото психолога">
+      <svg class="hero-photo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="18" r="8" stroke="#758284" stroke-width="1.5"/>
+        <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#758284" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="hero-photo-text">Фотография<br>будет добавлена</span>
+    </div>
+
+    <div class="hero-bottom">
+      <a href="#booking" class="hero-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Записаться
+      </a>
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────── -->
+  <section class="about fade-in">
+    <div class="container">
+      <span class="section-eyebrow">Обо мне</span>
+      <h2 class="section-title">Я здесь,<br>чтобы <em>слышать</em></h2>
+
+      <p class="body-text">
+        Меня зовут Анастасия. Я психолог-консультант и детский семейный психотерапевт.
+        Работаю в нарративном подходе — мягко, внимательно и без готовых ответов.
+      </p>
+      <p class="body-text">
+        Самое важное для меня в работе — по-настоящему слышать человека, быть рядом
+        и создавать пространство, где можно говорить о том, что важно.
+      </p>
+
+      <div class="availability">
+        <span class="avail-badge"><span class="avail-dot"></span>Онлайн — везде</span>
+        <span class="avail-badge"><span class="avail-dot"></span>Офлайн — Москва</span>
+      </div>
+
+      <div class="badges">
+        <span class="badge"><span class="badge-dot"></span>МГППУ — Бакалавриат</span>
+        <span class="badge"><span class="badge-dot"></span>МГППУ — Магистратура</span>
+        <span class="badge"><span class="badge-dot"></span>Детский телефон доверия</span>
+        <span class="badge"><span class="badge-dot"></span>Работа со взрослыми и детьми</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── APPROACH ──────────────────────────────── -->
+  <section class="approach fade-in">
+    <div class="container">
+      <span class="section-eyebrow">Подход</span>
+      <h2 class="section-title">Нарративная<br><em>терапия</em></h2>
+
+      <blockquote class="approach-quote">
+        Каждый человек — автор своей истории.<br>
+        Моя задача — помочь вам её переписать.
+      </blockquote>
+
+      <div class="approach-cards">
+        <div class="approach-card">
+          <div class="approach-card-num">01</div>
+          <div class="approach-card-title">Человек важнее проблемы</div>
+          <p class="approach-card-text">Вы — не ваша тревога и не ваша сложность. Нарративный подход разделяет человека и то, с чем он пришёл.</p>
+        </div>
+        <div class="approach-card">
+          <div class="approach-card-num">02</div>
+          <div class="approach-card-title">Через ценности — к ответам</div>
+          <p class="approach-card-text">Понять, что для вас по-настоящему важно — это уже путь к тому, что делать дальше.</p>
+        </div>
+        <div class="approach-card">
+          <div class="approach-card-num">03</div>
+          <div class="approach-card-title">Свобода и гибкость</div>
+          <p class="approach-card-text">Нарративный подход легко сочетается с другими методами. Это пространство без жёстких рамок.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TOPICS ─────────────────────────────────── -->
+  <section class="topics fade-in">
+    <div class="container">
+      <span class="section-eyebrow">С чем работаю</span>
+      <h2 class="section-title">Темы и<br><em>запросы</em></h2>
+
+      <div class="topics-grid">
+        <div class="topic-card">
+          <span class="topic-card-icon">🌱</span>
+          <div class="topic-card-title">Самооценка и уверенность</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">🔍</span>
+          <div class="topic-card-title">Понимание себя</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">💼</span>
+          <div class="topic-card-title">Профессиональная самореализация</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">💬</span>
+          <div class="topic-card-title">Отношения с людьми</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">🫶</span>
+          <div class="topic-card-title">Семья и близкие</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">🌊</span>
+          <div class="topic-card-title">Стресс и трудные ситуации</div>
+        </div>
+        <div class="topic-card wide">
+          <span class="topic-card-icon">✨</span>
+          <div class="topic-card-title">Распознавание и понимание своих чувств</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CLIENT ────────────────────────────────── -->
+  <section class="client fade-in">
+    <div class="container">
+      <span class="section-eyebrow">Кому подойдёт</span>
+      <h2 class="section-title">Мой<br><em>клиент</em></h2>
+
+      <div class="client-block">
+        <p class="client-block-text">
+          Это человек, который живёт свою жизнь и хочет узнать про себя что-то новое.
+          Разобраться с вопросами в работе, личной жизни или отношениях.
+          Почувствовать себя более осознанным, более счастливым.
+        </p>
+      </div>
+
+      <p class="body-text" style="margin-top: 24px;">
+        Я работаю со взрослыми, детьми и подростками. Формат — индивидуальные встречи.
+        Для работы важна одна вещь: желание разбираться.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ──────────────────────────────── -->
+  <section class="services fade-in" id="services">
+    <div class="container">
+      <span class="section-eyebrow">Услуги</span>
+      <h2 class="section-title">Форматы<br><em>работы</em></h2>
+
+      <div class="services-cards">
+        <div class="service-card featured">
+          <span class="service-card-tag">Основной формат</span>
+          <div class="service-card-name">Консультация</div>
+          <div class="service-card-duration">60 минут</div>
+          <div class="service-card-price">
+            <span class="price-num">2 000</span>
+            <span class="price-currency">₽</span>
+          </div>
+          <p class="service-card-note">Индивидуальная встреча, в начале которой мы вместе определяем направление</p>
+          <div class="service-formats">
+            <span class="format-badge">Онлайн</span>
+            <span class="format-badge">Москва</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FIRST SESSION ─────────────────────────── -->
+  <section class="first-session fade-in">
+    <div class="container">
+      <span class="section-eyebrow">Первая встреча</span>
+      <h2 class="section-title">Как это<br><em>происходит</em></h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Запись</div>
+            <p class="step-text">Напишите мне в Telegram — выберем удобное время для встречи</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Знакомство</div>
+            <p class="step-text">Первая встреча — это диагностика и знакомство. Рассказываете, с чем пришли. Я слушаю и задаю вопросы</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Совместный план</div>
+            <p class="step-text">Вместе понимаем, над чем будем работать и к чему хотим прийти</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Работа</div>
+            <p class="step-text">Регулярные встречи в удобном вам ритме — офлайн или онлайн</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── VALUES ────────────────────────────────── -->
+  <section class="values fade-in">
+    <div class="container">
+      <span class="section-eyebrow">В основе работы</span>
+      <h2 class="section-title">Мои<br><em>ценности</em></h2>
+
+      <div class="values-list">
+        <div class="value-item">
+          <div class="value-icon">🤍</div>
+          <div>
+            <div class="value-title">Честность и доброта</div>
+            <p class="value-text">Я создаю пространство, где можно быть собой — без осуждения и без масок</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🗝</div>
+          <div>
+            <div class="value-title">Свобода</div>
+            <p class="value-text">Важно то, что можно применить прямо сейчас. Никаких лишних рамок</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🎨</div>
+          <div>
+            <div class="value-title">Творчество</div>
+            <p class="value-text">Консультирование — живой процесс. Каждая встреча уникальна</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🛡</div>
+          <div>
+            <div class="value-title">Ответственность</div>
+            <p class="value-text">Главное — не навредить. Особенно на первых порах внимательное присутствие важнее любых техник</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BOOKING ───────────────────────────────── -->
+  <section class="booking fade-in" id="booking">
+    <div class="container">
+      <span class="section-eyebrow">Запись</span>
+      <h2 class="section-title">Сделать<br><em>первый шаг</em></h2>
+      <p class="body-text">
+        Напишите мне — и мы найдём подходящее время для встречи
+      </p>
+
+      <div class="booking-buttons">
+        <a href="https://t.me/" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Написать в Telegram
+        </a>
+        <a href="https://vk.com/" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.523-2.049-1.714-1.032-1.01-1.49-.9-1.49.299v1.415c0 .374-.116.6-1.17.6-1.49 0-3.227-.9-4.428-2.57-1.8-2.482-2.303-4.327-2.303-4.706 0-.2.075-.374.449-.374h1.744c.337 0 .449.15.567.524.6 1.714 1.6 3.227 2.003 3.227.15 0 .225-.075.225-.449V10.9c-.075-1.28-.748-1.38-.748-1.83 0-.225.187-.449.487-.449h2.74c.3 0 .4.15.4.487v3.262c0 .3.15.4.225.4.15 0 .299-.1.6-.449 1.05-1.16 1.79-2.97 1.79-2.97.1-.225.3-.449.674-.449h1.744c.524 0 .636.263.524.636-.225 1.05-2.406 4.1-2.406 4.1-.187.3-.262.449 0 .786.187.263.786.786 1.19 1.265.748.86 1.32 1.574 1.47 2.073.15.487-.075.73-.56.73z"/></svg>
+          ВКонтакте
+        </a>
+      </div>
+
+      <p class="booking-note">Отвечаю в течение дня · Первое сообщение бесплатно</p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-name">Смоленцева Анастасия</div>
+    <div class="footer-title">ПСИХОЛОГ-КОНСУЛЬТАНТ · НАРРАТИВНЫЙ ПОДХОД</div>
+    <div class="footer-links">
+      <a href="#booking" class="footer-link">Записаться</a>
+      <a href="#services" class="footer-link">Услуги и цены</a>
+      <a href="https://t.me/" class="footer-link">Telegram</a>
+    </div>
+    <div class="footer-copy">© 2024 Смоленцева Анастасия Ильинична</div>
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
