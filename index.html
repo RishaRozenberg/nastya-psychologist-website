@@ -6,25 +6,22 @@
   <title>Смоленцева Анастасия — Психолог</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:         #F4F0EE;
-      --bg-warm:    #F0E4D9;
-      --bg-card:    #FDFBF9;
-      --accent:     #758284;
-      --accent-mid: #929292;
-      --accent-light: #C9D6CF;
-      --sage:       #6B7D73;
-      --dark:       #302C2A;
-      --mid:        #6B6562;
-      --light-line: #E2DBD6;
+      --bg:           #F0EBE6;
+      --bg-warm:      #EAE0D8;
+      --bg-card:      #F6F1EE;
+      --accent:       #8B6E7F;
+      --accent-mid:   #A8909A;
+      --accent-light: #C8B0BE;
+      --sage:         #7A9290;
+      --dark:         #3A2E34;
+      --mid:          #786470;
+      --light-line:   #DDD0D6;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--dark);
@@ -34,27 +31,21 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
-
     /* ─── TYPOGRAPHY ─────────────────────────────── */
-    .serif { font-family: 'Cormorant Garamond', serif; }
-
     h1, h2, h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
       line-height: 1.2;
     }
-
     /* ─── LAYOUT ──────────────────────────────────── */
     .container {
       max-width: 480px;
       margin: 0 auto;
       padding: 0 24px;
     }
-
     section {
       padding: 64px 0;
     }
-
     /* ─── ANIMATIONS ──────────────────────────────── */
     .fade-in {
       opacity: 0;
@@ -65,7 +56,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
     /* ─── HEADER / HERO ───────────────────────────── */
     .hero {
       min-height: 100svh;
@@ -77,7 +67,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -90,7 +79,6 @@
       opacity: 0.18;
       pointer-events: none;
     }
-
     .hero::after {
       content: '';
       position: absolute;
@@ -103,11 +91,9 @@
       opacity: 0.07;
       pointer-events: none;
     }
-
     .hero-top {
       padding: 48px 24px 0;
     }
-
     .hero-label {
       font-family: 'Jost', sans-serif;
       font-weight: 400;
@@ -117,7 +103,6 @@
       color: var(--accent);
       margin-bottom: 28px;
     }
-
     .hero-name {
       font-size: clamp(42px, 11vw, 60px);
       font-weight: 300;
@@ -125,13 +110,11 @@
       color: var(--dark);
       margin-bottom: 8px;
     }
-
     .hero-name em {
-      font-style: italic;
+      font-style: normal;
       font-weight: 300;
-      color: var(--accent);
+      color: var(--dark);
     }
-
     .hero-title {
       font-family: 'Jost', sans-serif;
       font-weight: 300;
@@ -140,7 +123,6 @@
       letter-spacing: 0.04em;
       margin-bottom: 40px;
     }
-
     /* Photo placeholder */
     .hero-photo {
       width: calc(100% - 48px);
@@ -154,25 +136,22 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero-photo::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(160deg, rgba(201,214,207,0.4) 0%, rgba(117,130,132,0.15) 100%);
+      background: linear-gradient(160deg, rgba(200,176,190,0.35) 0%, rgba(139,110,127,0.12) 100%);
     }
-
     .hero-photo-text {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 17px;
       font-style: italic;
-      color: rgba(117,130,132,0.7);
+      color: rgba(139,110,127,0.7);
       text-align: center;
       position: relative;
       z-index: 1;
       padding: 16px;
     }
-
     .hero-photo-icon {
       display: block;
       width: 48px;
@@ -180,14 +159,12 @@
       margin: 0 auto 12px;
       opacity: 0.4;
     }
-
     .hero-bottom {
       padding: 24px 24px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-
     .hero-cta {
       display: inline-flex;
       align-items: center;
@@ -203,12 +180,10 @@
       border-radius: 100px;
       transition: background 0.3s ease, transform 0.2s ease;
     }
-
     .hero-cta:hover {
       background: var(--sage);
       transform: translateY(-2px);
     }
-
     .hero-scroll {
       display: flex;
       flex-direction: column;
@@ -216,7 +191,6 @@
       gap: 6px;
       opacity: 0.45;
     }
-
     .hero-scroll span {
       font-size: 10px;
       letter-spacing: 0.1em;
@@ -224,24 +198,20 @@
       writing-mode: vertical-rl;
       font-family: 'Jost', sans-serif;
     }
-
     .scroll-line {
       width: 1px;
       height: 40px;
       background: var(--accent);
       animation: scrollAnim 2s ease-in-out infinite;
     }
-
     @keyframes scrollAnim {
       0%, 100% { transform: scaleY(1); transform-origin: top; }
       50% { transform: scaleY(0.4); transform-origin: top; }
     }
-
     /* ─── ABOUT ───────────────────────────────────── */
     .about {
       background: var(--bg);
     }
-
     .section-eyebrow {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -252,27 +222,22 @@
       margin-bottom: 16px;
       display: block;
     }
-
     .section-title {
       font-size: clamp(32px, 8vw, 44px);
       color: var(--dark);
       margin-bottom: 24px;
     }
-
     .section-title em {
       font-style: italic;
       color: var(--accent);
     }
-
     .body-text {
       font-size: 17px;
       color: var(--mid);
       line-height: 1.8;
       margin-bottom: 16px;
     }
-
     .body-text:last-child { margin-bottom: 0; }
-
     /* Education badges */
     .badges {
       display: flex;
@@ -280,7 +245,6 @@
       gap: 8px;
       margin-top: 32px;
     }
-
     .badge {
       display: inline-flex;
       align-items: center;
@@ -292,7 +256,6 @@
       color: var(--mid);
       font-weight: 400;
     }
-
     .badge-dot {
       width: 6px;
       height: 6px;
@@ -300,7 +263,6 @@
       background: var(--accent);
       flex-shrink: 0;
     }
-
     /* ─── DIVIDER ──────────────────────────────────── */
     .divider {
       width: 48px;
@@ -309,7 +271,6 @@
       opacity: 0.3;
       margin: 0 24px 0;
     }
-
     /* ─── APPROACH ────────────────────────────────── */
     .approach {
       background: var(--accent);
@@ -317,7 +278,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .approach::before {
       content: '';
       position: absolute;
@@ -329,18 +289,14 @@
       background: rgba(255,255,255,0.05);
       pointer-events: none;
     }
-
     .approach .section-eyebrow { color: rgba(255,255,255,0.55); }
-
     .approach .section-title {
       color: #fff;
       font-size: clamp(30px, 8vw, 40px);
     }
-
     .approach .section-title em { color: var(--accent-light); }
-
     .approach-quote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-style: italic;
       font-size: clamp(20px, 5vw, 26px);
       color: rgba(255,255,255,0.85);
@@ -349,14 +305,12 @@
       padding-left: 20px;
       margin: 32px 0;
     }
-
     .approach-cards {
       display: flex;
       flex-direction: column;
       gap: 12px;
       margin-top: 32px;
     }
-
     .approach-card {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
@@ -364,42 +318,36 @@
       padding: 20px;
       backdrop-filter: blur(4px);
     }
-
     .approach-card-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 36px;
       font-style: italic;
       color: rgba(255,255,255,0.2);
       line-height: 1;
       margin-bottom: 8px;
     }
-
     .approach-card-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 20px;
       font-weight: 500;
       color: #fff;
       margin-bottom: 6px;
     }
-
     .approach-card-text {
       font-size: 15px;
       color: rgba(255,255,255,0.65);
       line-height: 1.7;
     }
-
     /* ─── TOPICS ──────────────────────────────────── */
     .topics {
       background: var(--bg-warm);
     }
-
     .topics-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       margin-top: 32px;
     }
-
     .topic-card {
       background: var(--bg-card);
       border-radius: 16px;
@@ -407,7 +355,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .topic-card::before {
       content: '';
       position: absolute;
@@ -418,30 +365,25 @@
       background: var(--accent-light);
       border-radius: 2px;
     }
-
     .topic-card-icon {
       font-size: 22px;
       margin-bottom: 8px;
       display: block;
     }
-
     .topic-card-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 17px;
       font-weight: 500;
       color: var(--dark);
       line-height: 1.3;
     }
-
     .topic-card.wide {
       grid-column: 1 / -1;
     }
-
     /* ─── CLIENT ──────────────────────────────────── */
     .client {
       background: var(--bg);
     }
-
     .client-block {
       background: var(--bg-card);
       border-radius: 24px;
@@ -450,10 +392,9 @@
       border: 1px solid var(--light-line);
       position: relative;
     }
-
     .client-block::before {
       content: '«';
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 80px;
       color: var(--accent-light);
       position: absolute;
@@ -462,28 +403,24 @@
       line-height: 1;
       opacity: 0.6;
     }
-
     .client-block-text {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 20px;
       font-style: italic;
       color: var(--dark);
       line-height: 1.6;
       padding-top: 24px;
     }
-
     /* ─── SERVICES ────────────────────────────────── */
     .services {
       background: var(--bg-warm);
     }
-
     .services-cards {
       display: flex;
       flex-direction: column;
       gap: 14px;
       margin-top: 32px;
     }
-
     .service-card {
       background: var(--bg-card);
       border-radius: 20px;
@@ -493,17 +430,14 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .service-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(117,130,132,0.12);
+      box-shadow: 0 12px 40px rgba(139,110,127,0.12);
     }
-
     .service-card.featured {
       background: var(--accent);
       border-color: var(--accent);
     }
-
     .service-card-tag {
       display: inline-block;
       font-size: 12px;
@@ -516,63 +450,50 @@
       border-radius: 100px;
       margin-bottom: 16px;
     }
-
     .service-card.featured .service-card-tag {
       background: rgba(255,255,255,0.15);
       color: rgba(255,255,255,0.8);
     }
-
     .service-card-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 26px;
       font-weight: 500;
       color: var(--dark);
       margin-bottom: 8px;
     }
-
     .service-card.featured .service-card-name { color: #fff; }
-
     .service-card-duration {
       font-size: 15px;
       color: var(--mid);
       margin-bottom: 20px;
     }
-
     .service-card.featured .service-card-duration { color: rgba(255,255,255,0.65); }
-
     .service-card-price {
       display: flex;
       align-items: baseline;
       gap: 6px;
     }
-
     .price-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 44px;
       font-weight: 400;
       color: var(--dark);
       line-height: 1;
     }
-
     .service-card.featured .price-num { color: #fff; }
-
     .price-currency {
       font-size: 18px;
       color: var(--mid);
       font-weight: 300;
     }
-
     .service-card.featured .price-currency { color: rgba(255,255,255,0.7); }
-
     .service-card-note {
       margin-top: 14px;
       font-size: 16px;
       color: var(--accent-mid);
       font-style: italic;
     }
-
     .service-card.featured .service-card-note { color: rgba(255,255,255,0.55); }
-
     /* Format badges */
     .service-formats {
       display: flex;
@@ -580,7 +501,6 @@
       gap: 6px;
       margin-top: 14px;
     }
-
     .format-badge {
       font-size: 13px;
       padding: 4px 12px;
@@ -588,17 +508,14 @@
       border: 1px solid var(--light-line);
       color: var(--mid);
     }
-
     .service-card.featured .format-badge {
       border-color: rgba(255,255,255,0.2);
       color: rgba(255,255,255,0.75);
     }
-
     /* ─── FIRST SESSION ───────────────────────────── */
     .first-session {
       background: var(--bg);
     }
-
     .steps {
       display: flex;
       flex-direction: column;
@@ -606,7 +523,6 @@
       margin-top: 32px;
       position: relative;
     }
-
     .steps::before {
       content: '';
       position: absolute;
@@ -616,16 +532,13 @@
       width: 1px;
       background: var(--light-line);
     }
-
     .step {
       display: flex;
       gap: 20px;
       padding-bottom: 28px;
       position: relative;
     }
-
     .step:last-child { padding-bottom: 0; }
-
     .step-num {
       width: 40px;
       height: 40px;
@@ -636,41 +549,35 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 18px;
       color: var(--accent);
       position: relative;
       z-index: 1;
     }
-
     .step-content { padding-top: 8px; }
-
     .step-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 19px;
       font-weight: 500;
       color: var(--dark);
       margin-bottom: 4px;
     }
-
     .step-text {
       font-size: 13px;
       color: var(--mid);
       line-height: 1.7;
     }
-
     /* ─── VALUES ──────────────────────────────────── */
     .values {
       background: var(--bg-warm);
     }
-
     .values-list {
       display: flex;
       flex-direction: column;
       gap: 16px;
       margin-top: 32px;
     }
-
     .value-item {
       display: flex;
       gap: 20px;
@@ -679,7 +586,6 @@
       background: var(--bg-card);
       border-radius: 16px;
     }
-
     .value-icon {
       width: 44px;
       height: 44px;
@@ -691,37 +597,31 @@
       font-size: 20px;
       flex-shrink: 0;
     }
-
     .value-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 19px;
       font-weight: 500;
       color: var(--dark);
       margin-bottom: 4px;
     }
-
     .value-text {
       font-size: 13px;
       color: var(--mid);
       line-height: 1.7;
     }
-
     /* ─── BOOKING / CTA ───────────────────────────── */
     .booking {
       background: var(--bg);
       text-align: center;
       padding: 80px 0;
     }
-
     .booking .section-title {
       margin-bottom: 16px;
     }
-
     .booking .body-text {
       max-width: 300px;
       margin: 0 auto 40px;
     }
-
     .booking-buttons {
       display: flex;
       flex-direction: column;
@@ -729,7 +629,6 @@
       max-width: 280px;
       margin: 0 auto;
     }
-
     .btn-primary {
       display: flex;
       align-items: center;
@@ -745,12 +644,10 @@
       letter-spacing: 0.04em;
       transition: background 0.3s, transform 0.2s;
     }
-
     .btn-primary:hover {
       background: var(--sage);
       transform: translateY(-2px);
     }
-
     .btn-secondary {
       display: flex;
       align-items: center;
@@ -766,63 +663,53 @@
       font-weight: 400;
       transition: border-color 0.3s, color 0.3s;
     }
-
     .btn-secondary:hover {
       border-color: var(--accent);
       color: var(--accent);
     }
-
     .booking-note {
       font-size: 12px;
       color: var(--accent-mid);
       margin-top: 24px;
       font-style: italic;
     }
-
     /* ─── FOOTER ──────────────────────────────────── */
     .footer {
       background: var(--dark);
       padding: 40px 24px;
       text-align: center;
     }
-
     .footer-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 22px;
       font-style: italic;
       color: rgba(255,255,255,0.9);
       margin-bottom: 8px;
     }
-
     .footer-title {
       font-size: 12px;
       color: rgba(255,255,255,0.4);
       letter-spacing: 0.1em;
       margin-bottom: 24px;
     }
-
     .footer-links {
       display: flex;
       justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
     }
-
     .footer-link {
       font-size: 12px;
       color: rgba(255,255,255,0.4);
       text-decoration: none;
       transition: color 0.3s;
     }
-
     .footer-link:hover { color: var(--accent-light); }
-
     .footer-copy {
       margin-top: 32px;
       font-size: 11px;
       color: rgba(255,255,255,0.2);
     }
-
     /* ─── ONLINE/OFFLINE BADGE ────────────────────── */
     .availability {
       display: flex;
@@ -830,7 +717,6 @@
       flex-wrap: wrap;
       margin-top: 28px;
     }
-
     .avail-badge {
       display: inline-flex;
       align-items: center;
@@ -842,7 +728,6 @@
       background: var(--bg-card);
       color: var(--mid);
     }
-
     .avail-dot {
       width: 7px;
       height: 7px;
@@ -850,44 +735,35 @@
       background: #7DC894;
       box-shadow: 0 0 0 3px rgba(125,200,148,0.2);
     }
-
     /* ─── DESKTOP RESPONSIVE ──────────────────────── */
     @media (min-width: 600px) {
       .container { max-width: 560px; }
-
       .hero-photo {
         width: calc(100% - 48px);
         aspect-ratio: 16/9;
       }
-
       .topics-grid {
         grid-template-columns: 1fr 1fr 1fr;
       }
-
       .topic-card.wide {
         grid-column: auto;
       }
-
       .services-cards {
         flex-direction: row;
         flex-wrap: wrap;
       }
-
       .service-card {
         flex: 1;
         min-width: 220px;
       }
     }
-
     @media (min-width: 900px) {
       .container { max-width: 860px; }
-
       .hero {
         min-height: 100vh;
         flex-direction: row;
         align-items: stretch;
       }
-
       .hero-top {
         flex: 1;
         display: flex;
@@ -896,7 +772,6 @@
         padding: 80px 48px;
         max-width: 440px;
       }
-
       .hero-photo {
         flex: 1;
         margin: 0;
@@ -905,36 +780,28 @@
         aspect-ratio: auto;
         min-height: 100vh;
       }
-
       .hero-bottom {
         position: absolute;
         bottom: 40px;
         left: 0;
         width: 440px;
       }
-
       .hero-name { font-size: 64px; }
-
       section { padding: 96px 0; }
-
       .topics-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-
       .steps {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px 48px;
       }
-
       .steps::before { display: none; }
-
       .step { padding-bottom: 0; }
     }
   </style>
 </head>
 <body>
-
   <!-- ─── HERO ─────────────────────────────────── -->
   <section class="hero">
     <div class="hero-top">
@@ -944,11 +811,9 @@
       </h1>
       <p class="hero-title">Психолог-консультант<br>Детский и семейный психотерапевт</p>
     </div>
-
-   <div class="hero-photo" aria-label="Фото психолога">
-  <img src="photo_2026-06-13%2015.08.24.jpeg" alt="Анастасия Смоленцева — психолог" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
-</div>
-
+    <div class="hero-photo" aria-label="Фото психолога">
+      <img src="office_anast.jpg" alt="Анастасия Смоленцева — психолог" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+    </div>
     <div class="hero-bottom">
       <a href="#booking" class="hero-cta">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -960,13 +825,11 @@
       </div>
     </div>
   </section>
-
   <!-- ─── ABOUT ─────────────────────────────────── -->
   <section class="about fade-in">
     <div class="container">
       <span class="section-eyebrow">Обо мне</span>
       <h2 class="section-title">Я здесь,<br>чтобы <em>слышать</em></h2>
-
       <p class="body-text">
         Меня зовут Анастасия. Я психолог-консультант и детский семейный психотерапевт.
         Работаю в нарративном подходе — мягко, внимательно и без готовых ответов.
@@ -975,12 +838,10 @@
         Самое важное для меня в работе — по-настоящему слышать человека, быть рядом
         и создавать пространство, где можно говорить о том, что важно.
       </p>
-
       <div class="availability">
         <span class="avail-badge"><span class="avail-dot"></span>Онлайн — везде</span>
         <span class="avail-badge"><span class="avail-dot"></span>Офлайн — Москва</span>
       </div>
-
       <div class="badges">
         <span class="badge"><span class="badge-dot"></span>МГППУ — Бакалавриат</span>
         <span class="badge"><span class="badge-dot"></span>МГППУ — Магистратура</span>
@@ -989,18 +850,15 @@
       </div>
     </div>
   </section>
-
   <!-- ─── APPROACH ──────────────────────────────── -->
   <section class="approach fade-in">
     <div class="container">
       <span class="section-eyebrow">Подход</span>
       <h2 class="section-title">Нарративная<br><em>терапия</em></h2>
-
       <blockquote class="approach-quote">
         Каждый человек — автор своей истории.<br>
         Моя задача — помочь вам её переписать.
       </blockquote>
-
       <div class="approach-cards">
         <div class="approach-card">
           <div class="approach-card-num">01</div>
@@ -1020,13 +878,11 @@
       </div>
     </div>
   </section>
-
   <!-- ─── TOPICS ─────────────────────────────────── -->
   <section class="topics fade-in">
     <div class="container">
       <span class="section-eyebrow">С чем работаю</span>
       <h2 class="section-title">Темы и<br><em>запросы</em></h2>
-
       <div class="topics-grid">
         <div class="topic-card">
           <span class="topic-card-icon">🌱</span>
@@ -1059,13 +915,11 @@
       </div>
     </div>
   </section>
-
   <!-- ─── CLIENT ────────────────────────────────── -->
   <section class="client fade-in">
     <div class="container">
       <span class="section-eyebrow">Кому подойдёт</span>
       <h2 class="section-title">Мой<br><em>клиент</em></h2>
-
       <div class="client-block">
         <p class="client-block-text">
           Это человек, который живёт свою жизнь и хочет узнать про себя что-то новое.
@@ -1073,20 +927,17 @@
           Почувствовать себя более осознанным, более счастливым.
         </p>
       </div>
-
       <p class="body-text" style="margin-top: 24px;">
         Я работаю со взрослыми, детьми и подростками. Формат — индивидуальные встречи.
         Для работы важна одна вещь: желание разбираться.
       </p>
     </div>
   </section>
-
   <!-- ─── SERVICES ──────────────────────────────── -->
   <section class="services fade-in" id="services">
     <div class="container">
       <span class="section-eyebrow">Услуги</span>
       <h2 class="section-title">Форматы<br><em>работы</em></h2>
-
       <div class="services-cards">
         <div class="service-card">
           <span class="service-card-tag">Знакомство</span>
@@ -1102,7 +953,6 @@
             <span class="format-badge">Офлайн</span>
           </div>
         </div>
-
         <div class="service-card featured">
           <span class="service-card-tag">Основной формат</span>
           <div class="service-card-name">Консультация</div>
@@ -1120,13 +970,11 @@
       </div>
     </div>
   </section>
-
   <!-- ─── FIRST SESSION ─────────────────────────── -->
   <section class="first-session fade-in">
     <div class="container">
       <span class="section-eyebrow">Первая встреча</span>
       <h2 class="section-title">Как это<br><em>происходит</em></h2>
-
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
@@ -1159,13 +1007,11 @@
       </div>
     </div>
   </section>
-
   <!-- ─── VALUES ────────────────────────────────── -->
   <section class="values fade-in">
     <div class="container">
       <span class="section-eyebrow">В основе работы</span>
       <h2 class="section-title">Мои<br><em>ценности</em></h2>
-
       <div class="values-list">
         <div class="value-item">
           <div class="value-icon">🤍</div>
@@ -1198,7 +1044,6 @@
       </div>
     </div>
   </section>
-
   <!-- ─── BOOKING ───────────────────────────────── -->
   <section class="booking fade-in" id="booking">
     <div class="container">
@@ -1207,32 +1052,29 @@
       <p class="body-text">
         Напишите мне — и мы найдём подходящее время для встречи
       </p>
-
       <div class="booking-buttons">
         <a href="https://t.me/nastismol" class="btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
           Написать в Telegram
         </a>
         <a href="https://max.ru/u/f9LHodD0cOKR2gbJPeelhCSD2vs9hlBEHP3mYvbUjdrHTBF_tkfQc4s_D8A" class="btn-secondary">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="maxG" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#9AAFB4"/>
-        <stop offset="100%" stop-color="#6B7D73"/>
-      </linearGradient>
-    </defs>
-    <rect width="24" height="24" rx="6" fill="url(#maxG)"/>
-    <path fill="white" d="M6 8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2.5l-2.5 2.5V16H9a3 3 0 0 1-3-3V8Z"/>
-    <circle cx="12" cy="10.5" r="1.8" fill="url(#maxG)"/>
-  </svg>
-  Написать в MAX
-</a>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="maxG" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#C8B0BE"/>
+                <stop offset="100%" stop-color="#8B6E7F"/>
+              </linearGradient>
+            </defs>
+            <rect width="24" height="24" rx="6" fill="url(#maxG)"/>
+            <path fill="white" d="M6 8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2.5l-2.5 2.5V16H9a3 3 0 0 1-3-3V8Z"/>
+            <circle cx="12" cy="10.5" r="1.8" fill="url(#maxG)"/>
+          </svg>
+          Написать в MAX
+        </a>
       </div>
-
       <p class="booking-note">Отвечаю в течение дня</p>
     </div>
   </section>
-
   <!-- ─── FOOTER ────────────────────────────────── -->
   <footer class="footer">
     <div class="footer-name">Смоленцева Анастасия</div>
@@ -1244,9 +1086,7 @@
     </div>
     <div class="footer-copy">© 2026 Смоленцева Анастасия Ильинична</div>
   </footer>
-
   <script>
-    // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1255,7 +1095,6 @@
         }
       });
     }, { threshold: 0.12 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 </body>
