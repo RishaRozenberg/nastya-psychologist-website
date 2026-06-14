@@ -8,23 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    @layer utilities {
-      @supports (background-image: url('data:image/svg+xml')) {
-        body::before {
-          content: '';
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-image:
-            url('data:image/svg+xml,%3Csvg width="200" height="200" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3CpatternId="linen" patternUnits="userSpaceOnUse" width="2" height="2"%3E%3Cline x1="0" y1="0" x2="2" y2="2" stroke="rgba(139,155,146,0.08)" stroke-width="0.5" /%3E%3Cline x1="2" y1="0" x2="0" y2="2" stroke="rgba(139,155,146,0.08)" stroke-width="0.5" /%3E%3C/pattern%3E%3C/defs%3E%3Crect width="200" height="200" fill="%23F5F1E8" /%3E%3Crect width="200" height="200" fill="url(%23linen)" /%3E%3C/svg%3E');
-          pointer-events: none;
-          z-index: -1;
-        }
-      }
+    body {
+      background: var(--bg);
+      background-image:
+        repeating-linear-gradient(0deg, rgba(139,155,146,0.1) 0px, rgba(139,155,146,0.1) 1px, transparent 1px, transparent 2px),
+        repeating-linear-gradient(90deg, rgba(139,155,146,0.05) 0px, rgba(139,155,146,0.05) 1px, transparent 1px, transparent 2px);
     }
- 
+
     :root {
       --bg:           #F5F1E8;
       --bg-warm:      #FAF7F0;
@@ -41,6 +31,17 @@
     html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
+      background-image:
+        repeating-linear-gradient(90deg,
+          transparent 0px,
+          transparent 2px,
+          rgba(92,107,86,0.03) 2px,
+          rgba(92,107,86,0.03) 4px,
+          transparent 4px,
+          transparent 6px,
+          rgba(92,107,86,0.06) 6px,
+          rgba(92,107,86,0.06) 7px
+        );
       color: var(--dark);
       font-family: 'Jost', sans-serif;
       font-weight: 300;
@@ -269,7 +270,8 @@
     .approach {
       background: var(--accent);
       background-image:
-        url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3CpatternId="linen" patternUnits="userSpaceOnUse" width="2" height="2"%3E%3Cline x1="0" y1="0" x2="2" y2="2" stroke="rgba(0,0,0,0.12)" stroke-width="0.5" /%3E%3Cline x1="2" y1="0" x2="0" y2="2" stroke="rgba(0,0,0,0.12)" stroke-width="0.5" /%3E%3C/pattern%3E%3C/defs%3E%3Crect width="100" height="100" fill="%238B9B92" /%3E%3Crect width="100" height="100" fill="url(%23linen)" /%3E%3C/svg%3E');
+        repeating-linear-gradient(45deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px),
+        repeating-linear-gradient(-45deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px);
       color: #fff;
       position: relative;
       overflow: hidden;
@@ -338,7 +340,18 @@
     .topic-card {
       background: var(--bg-card);
       background-image:
-        url('data:image/svg+xml,%3Csvg width="60" height="60" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="60" height="60" fill="%23FDFCF8" /%3E%3Cline x1="0" y1="0" x2="60" y2="60" stroke="rgba(139,155,146,0.12)" stroke-width="0.5" /%3E%3Cline x1="60" y1="0" x2="0" y2="60" stroke="rgba(139,155,146,0.12)" stroke-width="0.5" /%3E%3C/svg%3E');
+        repeating-linear-gradient(0deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(92,107,86,0.08) 1px,
+          rgba(92,107,86,0.08) 2px
+        ),
+        repeating-linear-gradient(90deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(92,107,86,0.08) 1px,
+          rgba(92,107,86,0.08) 2px
+        );
       border-radius: 16px;
       padding: 24px;
       position: relative;
@@ -375,7 +388,26 @@
     .service-card {
       background: var(--accent);
       background-image:
-        url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise2"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise" /%3E%3CfeColorMatrix in="noise" type="saturate" values="0" /%3E%3CfeComponentTransfer%3E%3CfeFuncA type="linear" slope="0.18" /%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width="100" height="100" fill="%238B9B92" filter="url(%23noise2)" /%3E%3C/svg%3E');
+        repeating-linear-gradient(0deg,
+          transparent 0px,
+          transparent 2px,
+          rgba(0,0,0,0.08) 2px,
+          rgba(0,0,0,0.08) 3px,
+          transparent 3px,
+          transparent 5px,
+          rgba(0,0,0,0.08) 5px,
+          rgba(0,0,0,0.08) 6px
+        ),
+        repeating-linear-gradient(90deg,
+          transparent 0px,
+          transparent 2px,
+          rgba(0,0,0,0.08) 2px,
+          rgba(0,0,0,0.08) 3px,
+          transparent 3px,
+          transparent 5px,
+          rgba(0,0,0,0.08) 5px,
+          rgba(0,0,0,0.08) 6px
+        );
       border-radius: 20px;
       padding: 32px 28px;
       margin-top: 32px;
@@ -497,7 +529,18 @@
       padding: 20px;
       background: var(--bg-card);
       background-image:
-        url('data:image/svg+xml,%3Csvg width="60" height="60" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="60" height="60" fill="%23FDFCF8" /%3E%3Ccircle cx="8" cy="8" r="0.8" fill="rgba(139,155,146,0.15)" /%3E%3Ccircle cx="25" cy="15" r="0.8" fill="rgba(139,155,146,0.15)" /%3E%3Ccircle cx="42" cy="10" r="0.8" fill="rgba(139,155,146,0.15)" /%3E%3Ccircle cx="55" cy="20" r="0.8" fill="rgba(139,155,146,0.15)" /%3E%3Ccircle cx="15" cy="35" r="0.8" fill="rgba(139,155,146,0.15)" /%3E%3Ccircle cx="50" cy="42" r="0.8" fill="rgba(139,155,146,0.15)" /%3E%3Ccircle cx="30" cy="55" r="0.8" fill="rgba(139,155,146,0.15)" /%3E%3C/svg%3E');
+        repeating-linear-gradient(0deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(92,107,86,0.08) 1px,
+          rgba(92,107,86,0.08) 2px
+        ),
+        repeating-linear-gradient(90deg,
+          transparent 0px,
+          transparent 1px,
+          rgba(92,107,86,0.08) 1px,
+          rgba(92,107,86,0.08) 2px
+        );
       border-radius: 16px;
       border: 1px solid var(--light-line);
     }
@@ -580,7 +623,16 @@
     .footer {
       background: var(--dark);
       background-image:
-        url('data:image/svg+xml,%3Csvg width="80" height="80" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="80" height="80" fill="%233D3530" /%3E%3Ccircle cx="10" cy="10" r="0.8" fill="rgba(255,255,255,0.15)" /%3E%3Ccircle cx="30" cy="20" r="0.8" fill="rgba(255,255,255,0.15)" /%3E%3Ccircle cx="50" cy="8" r="0.8" fill="rgba(255,255,255,0.15)" /%3E%3Ccircle cx="70" cy="25" r="0.8" fill="rgba(255,255,255,0.15)" /%3E%3Ccircle cx="20" cy="50" r="0.8" fill="rgba(255,255,255,0.15)" /%3E%3Ccircle cx="60" cy="60" r="0.8" fill="rgba(255,255,255,0.15)" /%3E%3Ccircle cx="40" cy="70" r="0.8" fill="rgba(255,255,255,0.15)" /%3E%3C/svg%3E');
+        repeating-linear-gradient(90deg,
+          transparent 0px,
+          transparent 2px,
+          rgba(255,255,255,0.08) 2px,
+          rgba(255,255,255,0.08) 3px,
+          transparent 3px,
+          transparent 5px,
+          rgba(255,255,255,0.04) 5px,
+          rgba(255,255,255,0.04) 8px
+        );
       padding: 40px 24px;
       text-align: center;
     }
@@ -650,16 +702,16 @@
   </style>
 </head>
 <body>
- 
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-top">
       <span class="hero-label">Психолог · Москва</span>
       <h1 class="hero-name">Смоленцева<br>Анастасия</h1>
-      <p class="hero-title">Психолог-консультант<br>Детский и семейный психотерапевт</p>
+      <p class="hero-title">Если вы устали от тревоги<br>и хотите жить по своим правилам</p>
     </div>
     <div class="hero-photo" aria-label="Фото психолога">
-      <img src="office_anast.jpg" alt="Анастасия Смоленцева — психолог" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+      <img src="photo_2026-06-13%2015.08.24.jpeg" alt="Анастасия Смоленцева — психолог" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
     </div>
     <div class="hero-bottom">
       <a href="#booking" class="hero-cta">
@@ -672,18 +724,20 @@
       </div>
     </div>
   </section>
- 
+
   <!-- ABOUT -->
   <section class="about fade-in">
     <div class="container">
-      <span class="section-eyebrow">Обо мне</span>
-      <h2 class="section-title">Я здесь, чтобы слышать</h2>
+      <span class="section-eyebrow">Узнаете себя?</span>
+      <h2 class="section-title">Если вы читаете это…</h2>
       <p class="body-text">
-        Меня зовут Анастасия. Я психолог-консультант и детский семейный психотерапевт. Работаю в нарративном подходе — бережно, внимательно и с искренним любопытством к Вашей истории.
+        …значит, внутри что-то звучит: «Так больше нельзя». Вы чувствуете, что способны на большее — на счастье, на лёгкость, на любовь, — но что-то постоянно останавливает, тревожит или заставляет сомневаться в себе.
       </p>
       <p class="body-text">
-        Самое важное для меня — по-настоящему слышать человека и создавать пространство,
-        где можно говорить о том, что важно.
+        Вы устали от тревожных мыслей, подавленного состояния, бесконечных обид и чувства вины? Хочется просто выдохнуть и почувствовать покой?
+      </p>
+      <p class="body-text">
+        Вам кажется, что другие лучше, успешнее, достойнее, а вы словно не на своем месте? Зависите от мнения окружающих и боитесь высказать свое истинное мнение?
       </p>
       <div class="availability">
         <span class="avail-badge"><span class="avail-dot"></span>Онлайн — везде</span>
@@ -693,79 +747,78 @@
         <span class="badge"><span class="badge-dot"></span>МГППУ — Бакалавриат</span>
         <span class="badge"><span class="badge-dot"></span>МГППУ — Магистратура</span>
         <span class="badge"><span class="badge-dot"></span>Детский телефон доверия</span>
-        <span class="badge"><span class="badge-dot"></span>Работа со взрослыми и детьми</span>
+        <span class="badge"><span class="badge-dot"></span>821 решённый запрос</span>
       </div>
     </div>
   </section>
- 
+
   <!-- APPROACH -->
   <section class="approach fade-in">
     <div class="container">
-      <span class="section-eyebrow">Подход</span>
-      <h2 class="section-title">Нарративная терапия</h2>
+      <span class="section-eyebrow">Что я делаю</span>
+      <h2 class="section-title">Помогу выйти из тупика</h2>
       <blockquote class="approach-quote">
-        Каждый человек — автор своей истории.<br>
-        Моя задача — помочь вам её переписать.
+        Я не обещаю результата за две встречи.<br>Я обещаю настоящие, глубокие изменения.
       </blockquote>
       <div class="approach-cards">
         <div class="approach-card">
           <div class="approach-card-num">01</div>
-          <div class="approach-card-title">Человек важнее проблемы</div>
-          <p class="approach-card-text">Вы — не ваша тревога и не ваша сложность. Нарративный подход разделяет человека и то, с чем он пришёл.</p>
+          <div class="approach-card-title">Исцеляю ваши боли</div>
+          <p class="approach-card-text">Вы не ваша тревога, не ваша вина, не ваша сложность. Разделяю человека и то, с чем вы пришли.</p>
         </div>
         <div class="approach-card">
           <div class="approach-card-num">02</div>
-          <div class="approach-card-title">Через ценности — к ответам</div>
-          <p class="approach-card-text">Понять, что для вас по-настоящему важно — это уже путь к тому, что делать дальше.</p>
+          <div class="approach-card-title">Находим ваши ценности</div>
+          <p class="approach-card-text">Понять, что для вас по-настоящему важно — это уже путь к тому, как жить по своим правилам.</p>
         </div>
         <div class="approach-card">
           <div class="approach-card-num">03</div>
-          <div class="approach-card-title">Свобода и гибкость</div>
-          <p class="approach-card-text">Нарративный подход легко сочетается с другими методами. Это пространство без жёстких рамок.</p>
+          <div class="approach-card-title">Даю вам свободу</div>
+          <p class="approach-card-text">Становитесь сами себе психологом. Учитесь слышать себя и строить жизнь, о которой мечтаете.</p>
         </div>
       </div>
     </div>
   </section>
- 
+
   <!-- TOPICS -->
   <section class="topics fade-in">
     <div class="container">
-      <span class="section-eyebrow">Примеры запросов</span>
-      <h2 class="section-title">Темы и запросы</h2>
+      <span class="section-eyebrow">Ваши боли</span>
+      <h2 class="section-title">С чем вы приходите</h2>
       <div class="topics-grid">
         <div class="topic-card">
-          <span class="topic-card-icon">🌱</span>
-          <div class="topic-card-title">Самооценка и уверенность в себе</div>
-        </div>
-        <div class="topic-card">
-          <span class="topic-card-icon">🔍</span>
-          <div class="topic-card-title">Понимание себя</div>
-        </div>
-        <div class="topic-card">
-          <span class="topic-card-icon">💼</span>
-          <div class="topic-card-title">Профессиональная самореализация</div>
-        </div>
-        <div class="topic-card">
           <span class="topic-card-icon">🌊</span>
-          <div class="topic-card-title">Преодоление стрессовых ситуаций</div>
+          <div class="topic-card-title">Постоянная тревога и панические атаки</div>
         </div>
         <div class="topic-card">
-          <span class="topic-card-icon">✨</span>
-          <div class="topic-card-title">Распознавание и понимание своих чувств</div>
+          <span class="topic-card-icon">🪞</span>
+          <div class="topic-card-title">Низкая самооценка и неуверенность</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">💔</span>
+          <div class="topic-card-title">Конфликты в отношениях</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">🔄</span>
+          <div class="topic-card-title">Повторяются одни и те же ошибки</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">⛓️</span>
+          <div class="topic-card-title">Зависимость от мнения других</div>
         </div>
         <div class="topic-card wide">
-          <span class="topic-card-icon">💬</span>
-          <div class="topic-card-title">Отношения с окружающими: с друзьями, с коллегами, с семьёй и близкими</div>
+          <span class="topic-card-icon">🎯</span>
+          <div class="topic-card-title">Хочу жить по своим правилам, но не знаю как начать</div>
         </div>
       </div>
     </div>
   </section>
- 
+
   <!-- SERVICES -->
   <section class="services fade-in" id="services">
     <div class="container">
-      <span class="section-eyebrow">Услуги</span>
-      <h2 class="section-title">Формат консультации</h2>
+      <span class="section-eyebrow">Результат</span>
+      <h2 class="section-title">Что вы получите</h2>
       <div class="service-card">
         <div class="service-card-name">Индивидуальная встреча</div>
         <div class="service-card-duration">60 минут</div>
@@ -773,7 +826,7 @@
           <span class="price-num">2 000</span>
           <span class="price-currency">₽</span>
         </div>
-        <p class="service-card-note">Индивидуальное внимание, глубокое погружение в Вашу историю, поиск ресурсов и новых возможностей</p>
+        <p class="service-card-note">Индивидуальная встреча, в начале которой мы вместе определяем направление</p>
         <div class="service-formats">
           <span class="format-badge">Онлайн</span>
           <span class="format-badge">Москва</span>
@@ -781,83 +834,83 @@
       </div>
     </div>
   </section>
- 
+
   <!-- FIRST SESSION -->
   <section class="first-session fade-in">
     <div class="container">
-      <span class="section-eyebrow">Первая встреча</span>
-      <h2 class="section-title">Как это происходит</h2>
+      <span class="section-eyebrow">Первый шаг</span>
+      <h2 class="section-title">Как начать работу</h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-content">
-            <div class="step-title">Запись</div>
-            <p class="step-text">Напишите мне в Telegram или в MAX — выберем удобное время для встречи</p>
+            <div class="step-title">Напишите мне</div>
+            <p class="step-text">Telegram или MAX — выберите удобный мессенджер</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-content">
-            <div class="step-title">Знакомство</div>
-            <p class="step-text">Первая встреча — это знакомство. Рассказываете, с чем пришли. Я слушаю и задаю вопросы</p>
+            <div class="step-title">Первая встреча</div>
+            <p class="step-text">Рассказываете, с чем пришли. Я слушаю, не осуждая, и задаю вопросы</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">Совместный план</div>
-            <p class="step-text">Вместе понимаем, над чем будем работать и к чему хотим прийти</p>
+            <div class="step-title">Строим план</div>
+            <p class="step-text">Вместе определяем, над чем работать и к чему хотим прийти</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-content">
-            <div class="step-title">Работа</div>
-            <p class="step-text">Регулярные встречи в удобном для Вас формате — офлайн или онлайн</p>
+            <div class="step-title">Начинаем менять</div>
+            <p class="step-text">Регулярные встречи, домашние задания, реальные сдвиги в жизни</p>
           </div>
         </div>
       </div>
     </div>
   </section>
- 
+
   <!-- VALUES -->
   <section class="values fade-in">
     <div class="container">
-      <span class="section-eyebrow">В основе работы</span>
-      <h2 class="section-title">Мои ценности</h2>
+      <span class="section-eyebrow">На что рассчитывать</span>
+      <h2 class="section-title">Мои принципы</h2>
       <div class="values-list">
         <div class="value-item">
-          <div class="value-icon">🤍</div>
+          <div class="value-icon">🤝</div>
           <div>
-            <div class="value-title">Честность и доброта</div>
-            <p class="value-text">Я создаю пространство, где можно быть собой, говорить правду и быть услышанным.</p>
+            <div class="value-title">Я на вашей стороне</div>
+            <p class="value-text">Не осуждаю, не критикую. Создаю пространство, где можно быть собой и говорить правду.</p>
           </div>
         </div>
         <div class="value-item">
           <div class="value-icon">🎨</div>
           <div>
-            <div class="value-title">Творчество</div>
-            <p class="value-text">Консультирование — живой процесс. Каждая встреча уникальна.</p>
+            <div class="value-title">Живой, гибкий процесс</div>
+            <p class="value-text">Каждый человек уникален. Нет универсальных решений, только подход именно для вас.</p>
           </div>
         </div>
         <div class="value-item">
-          <div class="value-icon">🛡</div>
+          <div class="value-icon">🔒</div>
           <div>
-            <div class="value-title">Конфиденциальность</div>
-            <p class="value-text">Берегу доверие, которое вы оказываете. Всё, что происходит на сессии, остаётся конфиденциально.</p>
+            <div class="value-title">Абсолютная конфиденциальность</div>
+            <p class="value-text">Всё, что происходит между нами, остаётся конфиденциально. Это ваше личное пространство.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
- 
+
   <!-- BOOKING -->
   <section class="booking fade-in" id="booking">
     <div class="container">
-      <span class="section-eyebrow">Запись</span>
-      <h2 class="section-title">Сделать первый шаг</h2>
+      <span class="section-eyebrow">Сделайте шаг</span>
+      <h2 class="section-title">Начните жить иначе</h2>
       <p class="body-text">
-        Напишите мне — и мы найдём подходящее время для встречи
+        Если вы готовы к изменениям, если хочется наконец-то выдохнуть и начать жить свою жизнь — давайте начнем этот путь вместе.
       </p>
       <div class="booking-buttons">
         <a href="https://t.me/nastismol" class="btn-primary">
@@ -882,7 +935,7 @@
       <p class="booking-note">Отвечаю в течение дня</p>
     </div>
   </section>
- 
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-name">Смоленцева Анастасия</div>
@@ -894,7 +947,7 @@
     </div>
     <div class="footer-copy">© 2026 Смоленцева Анастасия Ильинична</div>
   </footer>
- 
+
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
