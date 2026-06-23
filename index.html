@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Анастасия Смоленцева — Психолог</title>
+  <title>Смоленцева Анастасия — Психолог</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -28,8 +28,11 @@
       --light-line:   #DDE0D5;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
     html { scroll-behavior: smooth; }
     body {
+      display: flex;
+      flex-direction: column;
       background: var(--bg);
       background-image:
         repeating-linear-gradient(90deg,
@@ -621,6 +624,7 @@
     }
     /* ─── FOOTER ──────────────────────────────────── */
     .footer {
+      margin-top: auto;
       background: var(--dark);
       background-image:
         repeating-linear-gradient(90deg,
@@ -708,10 +712,10 @@
     <div class="hero-top">
       <span class="hero-label">Психолог · Москва</span>
       <h1 class="hero-name">Смоленцева<br>Анастасия</h1>
-      <p class="hero-title">Детский и семейный психотерапевт</p>
+      <p class="hero-title">Психолог-консультант<br>Детский и семейный психотерапевт</p>
     </div>
     <div class="hero-photo" aria-label="Фото психолога">
-      <img src="office_anast.jpg" alt="Анастасия Смоленцева — психолог" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+      <img src="photo_2026-06-13%2015.08.24.jpeg" alt="Анастасия Смоленцева — психолог" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
     </div>
     <div class="hero-bottom">
       <a href="#booking" class="hero-cta">
@@ -725,6 +729,7 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="about fade-in">
     <div class="container">
       <span class="section-eyebrow">Обо мне</span>
@@ -740,26 +745,15 @@
         <span class="avail-badge"><span class="avail-dot"></span>Онлайн — везде</span>
         <span class="avail-badge"><span class="avail-dot"></span>Офлайн — Москва</span>
       </div>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px;">
-  <div>
-    <div style="font-size: 12px; font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">Образование</div>
-    <div style="display: flex; flex-direction: column; gap: 8px;">
-      <span class="badge"><span class="badge-dot"></span>МГППУ — Бакалавриат</span>
-      <span class="badge"><span class="badge-dot"></span>МГППУ — Магистратура</span>
-    </div>
-  </div>
-  <div>
-    <div style="font-size: 12px; font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">Опыт работы</div>
-    <div style="display: flex; flex-direction: column; gap: 8px;">
-      <span class="badge"><span class="badge-dot"></span>Детский телефон доверия</span>
-      <span class="badge"><span class="badge-dot"></span>Работа со взрослыми и детьми</span>
-    </div>
-  </div>
-</div>
+      <div class="badges">
+        <span class="badge"><span class="badge-dot"></span>МГППУ — Бакалавриат</span>
+        <span class="badge"><span class="badge-dot"></span>МГППУ — Магистратура</span>
+        <span class="badge"><span class="badge-dot"></span>Детский телефон доверия</span>
+        <span class="badge"><span class="badge-dot"></span>Работа со взрослыми и детьми</span>
+      </div>
     </div>
   </section>
 
-  <!-- APPROACH -->
   <!-- APPROACH -->
   <section class="approach fade-in">
     <div class="container">
@@ -788,69 +782,63 @@
       </div>
     </div>
   </section>
-  </section>
 
   <!-- TOPICS -->
   <section class="topics fade-in">
-  <div class="container">
-    <span class="section-eyebrow">Ваши вопросы</span>
-    <h2 class="section-title">С чем вы приходите*</h2>
-    <div class="topics-grid">
-      <div class="topic-card">
-        <span class="topic-card-icon">😰</span>
-        <div class="topic-card-title">Чувствую себя не на месте и боюсь мнения других</div>
-      </div>
-      <div class="topic-card">
-        <span class="topic-card-icon">🪞</span>
-        <div class="topic-card-title">Низкая самооценка и сомнения в себе</div>
-      </div>
-      <div class="topic-card">
-        <span class="topic-card-icon">💔</span>
-        <div class="topic-card-title">Отношения приносят боль вместо радости</div>
-      </div>
-      <div class="topic-card">
-        <span class="topic-card-icon">🔄</span>
-        <div class="topic-card-title">Повторяются одни и те же ошибки в жизни</div>
-      </div>
-      <div class="topic-card">
-        <span class="topic-card-icon">⛓️</span>
-        <div class="topic-card-title">Не знаю, что мне на самом деле нужно</div>
-      </div>
-      <div class="topic-card wide">
-        <span class="topic-card-icon">🎯</span>
-        <div class="topic-card-title">Хочу изменений, но не знаю с чего начать</div>
+    <div class="container">
+      <span class="section-eyebrow">Примеры запросов</span>
+      <h2 class="section-title">Темы и запросы</h2>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <span class="topic-card-icon">🌱</span>
+          <div class="topic-card-title">Самооценка и уверенность в себе</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">🔍</span>
+          <div class="topic-card-title">Понимание себя</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">💼</span>
+          <div class="topic-card-title">Профессиональная самореализация</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">🌊</span>
+          <div class="topic-card-title">Преодоление стрессовых ситуаций</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">✨</span>
+          <div class="topic-card-title">Распознавание и понимание своих чувств</div>
+        </div>
+        <div class="topic-card wide">
+          <span class="topic-card-icon">💬</span>
+          <div class="topic-card-title">Отношения с окружающими: с друзьями, с коллегами, с семьёй и близкими</div>
+        </div>
       </div>
     </div>
-    <p class="body-text" style="margin-top: 24px; font-size: 14px; color: var(--accent); opacity: 0.8;">
-      * Это только примеры. Ваши запросы могут быть другими — главное, что вы хотите измениться.
-    </p>
-  </div>
-</section>
+  </section>
 
   <!-- SERVICES -->
   <section class="services fade-in" id="services">
     <div class="container">
-      <h2 class="section-title">Формат работы</h2>
+      <span class="section-eyebrow">Услуги</span>
+      <h2 class="section-title">Формат консультации</h2>
       <div class="service-card">
-        <div class="service-card-name">Консультация</div>
+        <div class="service-card-name">Индивидуальная встреча</div>
         <div class="service-card-duration">60 минут</div>
         <div class="service-card-price">
           <span class="price-num">2 000</span>
           <span class="price-currency">₽</span>
         </div>
-        <p class="service-card-note">Индивидуальное внимание, в начале которой мы вместе определяем направление</p>
+        <p class="service-card-note">Индивидуальное внимание, глубокое погружение в Вашу историю, поиск ресурсов и новых возможностей</p>
         <div class="service-formats">
           <span class="format-badge">Онлайн</span>
-          <span class="format-badge">Офлайн</span>
           <span class="format-badge">Москва</span>
         </div>
       </div>
     </div>
   </section>
- 
 
   <!-- FIRST SESSION -->
- <!-- FIRST SESSION -->
   <section class="first-session fade-in">
     <div class="container">
       <span class="section-eyebrow">Первая встреча</span>
@@ -886,17 +874,18 @@
         </div>
       </div>
     </div>
-    
+  </section>
+
   <!-- VALUES -->
   <section class="values fade-in">
     <div class="container">
-  
+      <span class="section-eyebrow">В основе работы</span>
       <h2 class="section-title">Мои ценности</h2>
       <div class="values-list">
         <div class="value-item">
           <div class="value-icon">🤍</div>
           <div>
-            <div class="value-title">Доброта и честность</div>
+            <div class="value-title">Честность и доброта</div>
             <p class="value-text">Я создаю пространство, где можно быть собой, говорить правду и быть услышанным.</p>
           </div>
         </div>
