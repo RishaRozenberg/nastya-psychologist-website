@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:           #F5F1E8;
-      --bg-warm:      #FAF7F0;
-      --bg-card:      #FDFCF8;
+      --bg:           #F7F6F3;
+      --bg-warm:      #FAF9F6;
+      --bg-card:      #FDFCFA;
       --accent:       #8B9B92;
       --accent-mid:   #A0ADA4;
       --accent-light: #B5C4BA;
@@ -27,17 +27,6 @@
       display: flex;
       flex-direction: column;
       background: var(--bg);
-      background-image:
-        repeating-linear-gradient(90deg,
-          transparent 0px,
-          transparent 2px,
-          rgba(92,107,86,0.03) 2px,
-          rgba(92,107,86,0.03) 4px,
-          transparent 4px,
-          transparent 6px,
-          rgba(92,107,86,0.06) 6px,
-          rgba(92,107,86,0.06) 7px
-        );
       color: var(--dark);
       font-family: 'Jost', sans-serif;
       font-weight: 300;
@@ -265,9 +254,6 @@
     /* ─── APPROACH ────────────────────────────────── */
     .approach {
       background: var(--accent);
-      background-image:
-        repeating-linear-gradient(45deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px),
-        repeating-linear-gradient(-45deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px);
       color: #fff;
       position: relative;
     }
@@ -334,19 +320,6 @@
     }
     .topic-card {
       background: var(--bg-card);
-      background-image:
-        repeating-linear-gradient(0deg,
-          transparent 0px,
-          transparent 1px,
-          rgba(92,107,86,0.08) 1px,
-          rgba(92,107,86,0.08) 2px
-        ),
-        repeating-linear-gradient(90deg,
-          transparent 0px,
-          transparent 1px,
-          rgba(92,107,86,0.08) 1px,
-          rgba(92,107,86,0.08) 2px
-        );
       border-radius: 16px;
       padding: 24px;
       position: relative;
@@ -382,27 +355,6 @@
     .services { background: var(--bg); }
     .service-card {
       background: var(--accent);
-      background-image:
-        repeating-linear-gradient(0deg,
-          transparent 0px,
-          transparent 2px,
-          rgba(0,0,0,0.08) 2px,
-          rgba(0,0,0,0.08) 3px,
-          transparent 3px,
-          transparent 5px,
-          rgba(0,0,0,0.08) 5px,
-          rgba(0,0,0,0.08) 6px
-        ),
-        repeating-linear-gradient(90deg,
-          transparent 0px,
-          transparent 2px,
-          rgba(0,0,0,0.08) 2px,
-          rgba(0,0,0,0.08) 3px,
-          transparent 3px,
-          transparent 5px,
-          rgba(0,0,0,0.08) 5px,
-          rgba(0,0,0,0.08) 6px
-        );
       border-radius: 20px;
       padding: 32px 28px;
       margin-top: 32px;
@@ -523,19 +475,6 @@
       align-items: flex-start;
       padding: 20px;
       background: var(--bg-card);
-      background-image:
-        repeating-linear-gradient(0deg,
-          transparent 0px,
-          transparent 1px,
-          rgba(92,107,86,0.08) 1px,
-          rgba(92,107,86,0.08) 2px
-        ),
-        repeating-linear-gradient(90deg,
-          transparent 0px,
-          transparent 1px,
-          rgba(92,107,86,0.08) 1px,
-          rgba(92,107,86,0.08) 2px
-        );
       border-radius: 16px;
       border: 1px solid var(--light-line);
     }
@@ -618,17 +557,6 @@
     .footer {
       margin-top: auto;
       background: var(--dark);
-      background-image:
-        repeating-linear-gradient(90deg,
-          transparent 0px,
-          transparent 2px,
-          rgba(255,255,255,0.08) 2px,
-          rgba(255,255,255,0.08) 3px,
-          transparent 3px,
-          transparent 5px,
-          rgba(255,255,255,0.04) 5px,
-          rgba(255,255,255,0.04) 8px
-        );
       padding: 40px 24px;
       text-align: center;
     }
