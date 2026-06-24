@@ -15,7 +15,7 @@
       --accent:       #8F6E84;
       --accent-mid:   #B89FB5;
       --accent-light: #D4B8CE;
-      --sage:         #6B5165;
+      --sage:         #7B5A71;
       --dark:         #2D241F;
       --mid:          #6B5560;
       --light-line:   #E5D5CC;
@@ -218,8 +218,8 @@
       padding: 8px 16px;
       background: var(--bg-warm);
       border-radius: 100px;
-      font-size: 15px;
-      color: var(--dark);
+      font-size: 14px;
+      color: var(--mid);
       font-weight: 400;
     }
     .badge-dot {
@@ -293,8 +293,8 @@
     .approach-card-num {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 32px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.4);
+      font-weight: 200;
+      color: rgba(255,255,255,0.2);
       line-height: 1;
       margin-bottom: 8px;
     }
@@ -306,10 +306,9 @@
       margin-bottom: 6px;
     }
     .approach-card-text {
-      font-size: 16px;
-      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
       line-height: 1.7;
-      font-weight: 400;
     }
     /* ─── TOPICS ──────────────────────────────────── */
     .topics { background: var(--bg-warm); }
@@ -393,10 +392,9 @@
     }
     .service-card-note {
       margin-top: 14px;
-      font-size: 17px;
-      color: rgba(255,255,255,0.7);
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
       font-style: normal;
-      font-weight: 400;
     }
     .service-formats {
       display: flex;
@@ -459,10 +457,9 @@
       margin-bottom: 4px;
     }
     .step-text {
-      font-size: 17px;
+      font-size: 16px;
       color: var(--mid);
       line-height: 1.7;
-      font-weight: 400;
     }
     /* ─── VALUES ──────────────────────────────────── */
     .values { background: var(--bg); }
@@ -499,10 +496,9 @@
       margin-bottom: 4px;
     }
     .value-text {
-      font-size: 17px;
+      font-size: 16px;
       color: var(--mid);
       line-height: 1.7;
-      font-weight: 400;
     }
     /* ─── BOOKING ─────────────────────────────────── */
     .booking {
@@ -635,7 +631,6 @@
     <div class="hero-top">
       <span class="hero-label">Психолог · Москва</span>
       <h1 class="hero-name">Анастасия<br>Смоленцева</h1>
-      <p class="hero-title">Детский и семейный психотерапевт</p>
     </div>
     <div class="hero-photo" aria-label="Фото психолога">
       <img src="office_anast.jpg" alt="Анастасия Смоленцева — психолог" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
@@ -662,18 +657,13 @@
         Самое важное для меня — по-настоящему слышать человека и создавать пространство,
         где можно говорить о том, что важно.
       </p>
-      <div class="availability">
-        <span class="avail-badge"><span class="avail-dot"></span>Онлайн — везде</span>
-        <span class="avail-badge"><span class="avail-dot"></span>Офлайн — Москва</span>
-      </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px;">
         <div>
           <div style="font-size: 12px; font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">Образование</div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <span class="badge"><span class="badge-dot"></span>МГППУ — Бакалавриат</span>
             <span class="badge"><span class="badge-dot"></span>МГППУ — Магистратура</span>
-            <span class="badge"><span class="badge-dot"></span>Нарративный подход 1 ступень</span>
-            <span class="badge"><span class="badge-dot"></span>Нарративный подход 2 ступень</span>
+            <span class="badge"><span class="badge-dot"></span>Нарративный подход 1 и 2 ступени</span>
           </div>
         </div>
         <div>
@@ -717,40 +707,36 @@
   </section>
   <!-- TOPICS -->
   <section class="topics fade-in">
-    <div class="container">
-      <span class="section-eyebrow">Ваши вопросы</span>
-      <h2 class="section-title">С чем вы приходите*</h2>
-      <div class="topics-grid">
-        <div class="topic-card">
-          <span class="topic-card-icon">😰</span>
-          <div class="topic-card-title">Чувствую себя не на месте и боюсь мнения других</div>
-        </div>
-        <div class="topic-card">
-          <span class="topic-card-icon">🪞</span>
-          <div class="topic-card-title">Низкая самооценка и сомнения в себе</div>
-        </div>
-        <div class="topic-card">
-          <span class="topic-card-icon">💔</span>
-          <div class="topic-card-title">Отношения приносят боль вместо радости</div>
-        </div>
-        <div class="topic-card">
-          <span class="topic-card-icon">🔄</span>
-          <div class="topic-card-title">Повторяются одни и те же ошибки в жизни</div>
-        </div>
-        <div class="topic-card">
-          <span class="topic-card-icon">⛓️</span>
-          <div class="topic-card-title">Не знаю, что мне на самом деле нужно</div>
-        </div>
-        <div class="topic-card wide">
-          <span class="topic-card-icon">🎯</span>
-          <div class="topic-card-title">Хочу изменений, но не знаю с чего начать</div>
-        </div>
+  <div class="container">
+    <span class="section-eyebrow">Ваши вопросы</span>
+    <h2 class="section-title">С чем вы приходите*</h2>
+    <div class="topics-grid">
+      <div class="topic-card">
+        <span class="topic-card-icon">💼</span>
+        <div class="topic-card-title">Профессиональная самореализация</div>
       </div>
-      <p class="body-text" style="margin-top: 24px; font-size: 14px; color: var(--accent); opacity: 0.8;">
-        * Это только примеры. Ваши запросы могут быть другими — главное, что вы хотите измениться.
-      </p>
+      <div class="topic-card">
+        <span class="topic-card-icon">💭</span>
+        <div class="topic-card-title">Распознавание и понимание своих чувств</div>
+      </div>
+      <div class="topic-card">
+        <span class="topic-card-icon">⛈️</span>
+        <div class="topic-card-title">Трудные жизненные ситуации</div>
+      </div>
+      <div class="topic-card">
+        <span class="topic-card-icon">🗺️</span>
+        <div class="topic-card-title">Исследование себя и своих смыслов</div>
+      </div>
+      <div class="topic-card wide">
+        <span class="topic-card-icon">🤝</span>
+        <div class="topic-card-title">Отношения с окружающими: с семьей, с друзьями, с коллегами, с партнером</div>
+      </div>
     </div>
-  </section>
+    <p class="body-text" style="margin-top: 24px; font-size: 14px; color: var(--accent); opacity: 0.8;">
+      * Это только примеры. Ваши запросы могут быть другими — главное, что вы хотите измениться.
+    </p>
+  </div>
+</section>
   <!-- SERVICES -->
   <section class="services fade-in" id="services">
     <div class="container">
@@ -854,13 +840,13 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <defs>
               <linearGradient id="maxG" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#C7D3BF"/>
-                <stop offset="100%" stop-color="#9CAF88"/>
+                <stop offset="0%" stop-color="#8F6E84"/>
+                <stop offset="100%" stop-color="#6B5165"/>
               </linearGradient>
             </defs>
             <rect width="24" height="24" rx="6" fill="url(#maxG)"/>
             <path fill="white" d="M6 8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2.5l-2.5 2.5V16H9a3 3 0 0 1-3-3V8Z"/>
-            <circle cx="12" cy="10.5" r="1.8" fill="url(#maxG)"/>
+            <circle cx="12" cy="10.5" r="1.8" fill="white"/>
           </svg>
           Написать в MAX
         </a>
