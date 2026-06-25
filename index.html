@@ -20,20 +20,21 @@
       --mid:          #6B5560;
       --light-line:   #E5D5CC;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    html { scroll-behavior: smooth; }
-    body {
-      display: flex;
-      flex-direction: column;
-      background: var(--bg);
-      color: var(--dark);
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; width: 100%; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  width: 100%;
+}
     h1, h2, h3 {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-weight: 300;
